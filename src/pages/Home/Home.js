@@ -43,7 +43,7 @@ const Home = () => {
   }, [])
 
   return(
-    <div className="d-flex flex-column min-vh-100">
+    <div >
       <header>
         <Navbar mostrarMenu={mostrarMenu} />
       </header>
