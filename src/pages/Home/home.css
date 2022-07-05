@@ -1,0 +1,30 @@
+.titulo-home{
+  padding: 30px;
+  text-shadow: 2px 4px 24px rgba(255,255,0,0.97);
+  font-size: xx-large;
+}
+
+#padre {
+  position: relative;
+  display: inline-block;
+}
+
+.card-body {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.card-title{
+  font-size: 25px;
+}
+.card-subtitle{
+  font-size: 10px;
+}
+.card-text{
+  font-size: 15px;
+}
+
+.img-fondo{
+  width: 100%;
+}

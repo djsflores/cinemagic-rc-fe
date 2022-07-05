@@ -1,0 +1,129 @@
+.contenedorNav {
+  background-size: cover;
+  min-height: 80px;
+  background-color: black;
+}
+
+@media screen and (max-width: 776px) {
+  .botonContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .botonNav {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .titleNabvar {
+    width: auto;
+    height: 30px !important;
+  }
+}
+
+@media screen and (min-width: 778px) {
+  .botonNav {
+    margin-right: auto;
+  }
+}
+
+.titleNabvar {
+  height: 40px;
+}
+
+#menu {
+  border: none;
+  background-color: black;
+}
+
+.imgMenu {
+  width: 40px;
+  height: 40px;
+}
+
+.headerNav {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  color: aliceblue;
+}
+
+.listado {
+  text-align: start;
+  color: aliceblue;
+}
+
+li {
+  margin-top: 15px;
+}
+
+hr {
+  margin-top: 30px;
+}
+
+.navItem {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.botonContainer {
+  margin-top: 12px;
+}
+
+.botonNav {
+  padding: 2px;
+  border-radius: 15px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: none;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.buscadorNavbar {
+  margin-right: 15px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 776px) {
+  .botonContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .botonNav {
+    margin-top: 5px;
+  }
+
+  .titleNabvar {
+    width: auto;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .titleNabvar {
+    width: 140px;
+    margin-left: 50px;
+    margin-top: 15px;
+  }
+
+  .botonNav {
+      font-size: 12px;
+      padding: 4px;
+      margin-right: auto;
+  }
+}

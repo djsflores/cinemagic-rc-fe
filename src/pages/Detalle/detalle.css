@@ -1,0 +1,37 @@
+.detail-container{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.col{
+  max-width: 500px;
+  margin: 15px;
+  height: auto;
+  height: 80%;
+}
+
+.movie-image{
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.resumen{
+  text-align: justify;
+}
+
+.titulo-detail{
+  padding: 30px;
+  text-shadow: 2px 4px 24px rgba(0, 255, 234, 0.97);
+  font-size: larger;
+}
+
+@media (max-width: 560px){
+  .titulo-detail{
+      padding: 10px;
+      text-align: center;
+  }
+  
+}
