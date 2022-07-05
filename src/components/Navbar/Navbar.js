@@ -23,7 +23,7 @@ const Navbar = ({mostrarMenu}) => {
       <nav className="navbar navbar-light fixed-top">
         <div className="container-fluid d-flex flex-row-reverse">
           <div className={style.botonContainer}>
-            <NavLink to="/login" className={style.botonNav} onClick={logOut}>
+            <NavLink to="/login" className={style.botonNav} onClick={logOut} end>
               Salir
             </NavLink>
           </div>
@@ -62,17 +62,17 @@ const Navbar = ({mostrarMenu}) => {
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li>
-                    <NavLink to="/home" className={style.navItem}>
+                    <NavLink to="/home" className={style.navItem} end>
                     
                       Películas
                     </NavLink>
                   </li>
                   <hr />
                   {
-                    GenresData.map(genero => <NavLink to={"/movies-by-genre"+genero.name} className={style.navItem} key={genero.id}>{genero.nombre}</NavLink>)
+                    GenresData.map(genero => <NavLink to={"/movies-by-genre"+genero.name} className={style.navItem} key={genero.id} end>{genero.nombre}</NavLink>)
                   }
                   <li>
-                    <NavLink to="/movies-by-rolling-code:programar" className={style.navItem}>
+                    <NavLink to="/movies-by-rolling-code:programar" className={style.navItem} end>
                       RollingCode
                     </NavLink>
                   </li>
