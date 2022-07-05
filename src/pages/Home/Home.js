@@ -6,6 +6,7 @@ import CarouselSlider from "../../components/CarouselSlider/CarouselSlider";
 import "./home.css";
 import GenresData from "../../Genres.json";
 import Footer from "../../components/Footer/Footer";
+import CarruselHome from "../../components/CarruselHome/CarruselHome";
 
 const Home = () => {
   const urlBackend = process.env.REACT_APP_URL; 
@@ -47,15 +48,8 @@ const Home = () => {
         <Navbar mostrarMenu={mostrarMenu} />
       </header>
       <main>
-        <section>
-        <div id="padre">
-          <img className="d-block img-fondo" src={pelis[0]?.fondo} alt={pelis[0]?.titulo} />
-          <div className="card-body">
-            <h5 className="card-title">{pelis[0]?.titulo}</h5>
-            <h2 className="card-subtitle">{pelis[0]?.genero}</h2>
-            <p className="card-text">{pelis[0]?.sinopsis}</p>
-          </div>
-        </div>
+        <section className="mt-3">
+          <CarruselHome pelis={pelis} />
         </section>
         <section>
           {
