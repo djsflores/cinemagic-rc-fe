@@ -64,7 +64,7 @@ const MoviesByGenre = () => {
           </ul>
         </section>
       </main>
-      <footer >
+      <footer className="mt-auto">
         <Footer />
       </footer> 
     </div>
