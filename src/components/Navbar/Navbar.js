@@ -8,7 +8,7 @@ const Navbar = ({mostrarMenu}) => {
 
   const logOut = () => {
     localStorage.clear();
-    window.location.href="/login";
+    window.location.href="/";
   }
 
   const userJson = localStorage.getItem('cinemagicUser');
@@ -50,7 +50,6 @@ const Navbar = ({mostrarMenu}) => {
             aria-labelledby="offcanvasNavbarLabel"
           >
             <div className={style.headerNav}>
-              {/* <h5 className="InicioNav">Inicio</h5> */}
               <h5 className="InicioNav">{usuario}</h5>
               <button
                 type="button"
@@ -64,6 +63,7 @@ const Navbar = ({mostrarMenu}) => {
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li>
                     <NavLink to="/home" className={style.navItem}>
+                    
                       Películas
                     </NavLink>
                   </li>

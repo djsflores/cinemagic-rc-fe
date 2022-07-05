@@ -6,7 +6,6 @@ import CarouselSlider from "../../components/CarouselSlider/CarouselSlider";
 import "./home.css";
 import GenresData from "../../Genres.json";
 import Footer from "../../components/Footer/Footer";
-import CarruselHome from "../../components/CarruselHome/CarruselHome";
 
 const Home = () => {
   const urlBackend = process.env.REACT_APP_URL; 
@@ -43,21 +42,18 @@ const Home = () => {
   }, [])
 
   return(
-    <div >
+    <div className="d-flex flex-column min-vh-100">
       <header>
         <Navbar mostrarMenu={mostrarMenu} />
       </header>
       <main>
-        <section className="mt-3">
-          <CarruselHome pelis={pelis} />
-        </section>
         <section>
           {
             GenresData.map(genero => pelis?.filter(peli => peli.genero === genero.name).length >1 ? (<CarouselSlider pelis={pelis.filter(peli => peli.genero === genero.name)} key={genero.id} genero={genero.nombre} />) : (<br key={genero.id} />) )
           }
         </section>
       </main>
-      <footer >
+      <footer className="mt-auto" >
         <Footer />
       </footer> 
     </div>

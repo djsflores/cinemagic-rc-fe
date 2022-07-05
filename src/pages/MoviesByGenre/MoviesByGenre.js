@@ -47,7 +47,7 @@ const MoviesByGenre = () => {
   }, [handle])
 
   return ( 
-    <div >
+    <div className="d-flex flex-column min-vh-100">
       <header>
         <Navbar mostrarMenu={mostrarMenu} />
       </header>
