@@ -59,7 +59,7 @@ const Home = () => {
         </section>
         <section>
           {
-            GenresData.map(genero => pelis?.filter(peli => peli.genero === genero.name).length >5 ? (<CarouselSlider pelis={pelis.filter(peli => peli.genero === genero.name)} key={genero.id} genero={genero.nombre} />) : (<br key={genero.id} />) )
+            GenresData.map(genero => pelis?.filter(peli => peli.genero === genero.name).length >1 ? (<CarouselSlider pelis={pelis.filter(peli => peli.genero === genero.name)} key={genero.id} genero={genero.nombre} />) : (<br key={genero.id} />) )
           }
         </section>
       </main>
