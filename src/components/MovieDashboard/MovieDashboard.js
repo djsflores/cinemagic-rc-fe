@@ -202,11 +202,11 @@ const MovieDashboard = (props) => {
               <div className="searchIcon">
                 {suggestions.length === 0 ? (
                   <button className="boton-search-close">
-                    <img src={iconSearch} onClick={fillFields} />
+                    <img src={iconSearch} onClick={fillFields} alt='logo' />
                   </button>
                 ) : (
                   <button className="boton-search-close" id="clearBtn" onClick={clearInput}>
-                    <img src={iconClose} />
+                    <img src={iconClose} alt='logo' />
                   </button>
                 )}
               </div>
