@@ -4,6 +4,7 @@ import "../MovieDashboard/movieDashboard.css"
 import iconSearch from '../../assets/images/search.svg';
 import iconClose from '../../assets/images/close.svg';
 import GenresData from "../../Genres.json";
+import Swal from 'sweetalert2';
 
 const MovieDashboard = (props) => {
   const urlBackend = process.env.REACT_APP_URL; 
@@ -30,13 +31,20 @@ const MovieDashboard = (props) => {
         })
         const json = await resp.json()
         if(resp.ok){
-          alert(json.mensaje);
-          if(json.estado === 401){
-            localStorage.clear();
-            window.location.href="/login";
-          } else {
-            cambiaEstadoAgregar(false);
-          }
+          Swal.fire({
+            title: 'CineMagic',
+            text: json.mensaje,
+            icon: "success",
+            showConfirmButton: false,
+            timer: 2000
+          }).then(function() {
+            if(json.estado === 401){
+              localStorage.clear();
+              window.location.href="/login";
+            } else {
+              cambiaEstadoAgregar(false);
+            }
+          })
         }
       } else {
         if(editar){
@@ -50,13 +58,20 @@ const MovieDashboard = (props) => {
           })
           const json = await resp.json()
           if(resp.ok){
-            alert(json.mensaje);
-            if(json.estado === 401){
-              localStorage.clear();
-              window.location.href="/login";
-            } else {
-              cambiaEstadoEditar(false);
-            }
+            Swal.fire({
+              title: 'CineMagic',
+              text: json.mensaje,
+              icon: "success",
+              showConfirmButton: false,
+              timer: 2000
+            }).then(function() {
+              if(json.estado === 401){
+                localStorage.clear();
+                window.location.href="/login";
+              } else {
+                cambiaEstadoEditar(false);
+              }
+            })
           }
         }
       }
@@ -89,7 +104,13 @@ const MovieDashboard = (props) => {
       })
       const json = await resp.json()
       if(resp.ok){
-        alert(json.mensaje);
+        /*alert(json.mensaje);*/
+        Swal.fire({
+          title: "Informacón",
+          text: json.mensage,
+          icon: "success",
+          timer: "3000",
+        });
         if(json.estado === 401){
           localStorage.clear();
           window.location.href="/login";
@@ -181,11 +202,11 @@ const MovieDashboard = (props) => {
               <div className="searchIcon">
                 {suggestions.length === 0 ? (
                   <button className="boton-search-close">
-                    <img src={iconSearch} onClick={fillFields} alt='logo' />
+                    <img src={iconSearch} onClick={fillFields} />
                   </button>
                 ) : (
                   <button className="boton-search-close" id="clearBtn" onClick={clearInput}>
-                    <img src={iconClose} alt='logo' />
+                    <img src={iconClose} />
                   </button>
                 )}
               </div>
